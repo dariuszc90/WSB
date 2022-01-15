@@ -1,0 +1,5 @@
+git clone https://github.com/dariuszc90/WSB
+cd WSB
+mkdir CreateWebApp
+cd CreateWebApp
+pwd

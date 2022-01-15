@@ -1,0 +1,19 @@
+az group create `
+  --name WSB `
+  --location "westeurope"
+
+  
+New-AzResourceGroupDeployment `
+  -Name blanktemplate `
+  -ResourceGroupName myResourceGroup `
+  -TemplateFile $templateFile
+
+
+  templateFile="C:\Users\Dariusz\OneDrive\Documents\podyplomowe\armdeploy\azuredeploy.json"
+
+  
+az deployment group create \
+  --name addoutputs \
+  --resource-group WSB \
+  --template-file $templateFile \
+  --parameters storagePrefix=store storageSKU=Standard_LRS
